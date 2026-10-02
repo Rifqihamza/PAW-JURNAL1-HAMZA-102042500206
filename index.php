@@ -100,10 +100,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // - Memeriksa apakah format email valid (Hint : gunakan fungsi filter_var)
     // silakan taruh kode kalian di bawah
 
-    $sanitation =  filter_var($email, FILTER_VALIDATE_EMAIL);
     if ($email == '') {
         $emailErr = 'Email Tidak Boleh Kosong';
-    } elseif (!filter_var($sanitation, FILTER_VALIDATE_EMAIL)) {
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailErr = 'Email Tidak Valid';
     };
 
