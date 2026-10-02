@@ -88,7 +88,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // - Validasi agar nomor whatsapp diawali '0' atau '62' (Hint : gunakan fungsi substr)
     // silakan taruh kode kalian di bawah
 
-    $subs = substr($whatsapp, 0, 2);
     if ($whatsapp == '') {
         $waErr  = 'Nomor Whatsapp Tidak Boleh Kosong';
     } elseif (substr($whatsapp, 0, 1) != '0' && substr($whatsapp, 0, 2) != '62') {
